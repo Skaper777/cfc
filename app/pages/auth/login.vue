@@ -12,10 +12,15 @@ const email = ref("");
 const password = ref("");
 
 const signInWithOtp = async () => {
-  await supabase.auth.signInWithPassword({
-    email: email.value,
-    password: password.value,
-  });
-  navigateTo("/auth/confirm");
+  try {
+    const res = await supabase.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+
+    if (!res.error) navigateTo("/auth/confirm");
+  } catch (error) {
+    console.error(error);
+  }
 };
 </script>
