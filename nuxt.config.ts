@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["ui-library/dist/ui-library.css"],
-  plugins: ["~/plugins/ui-library.client.ts"],
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",

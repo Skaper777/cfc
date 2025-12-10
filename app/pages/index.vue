@@ -1,9 +1,9 @@
 <template>
-  <h1>Index <CfcInput v-model="test" /></h1>
+  <NuxtPage />
 </template>
 
 <script lang="ts" setup>
-const test = ref("");
+// const test = ref("");
 
 onMounted(() => async () => {
   await useSupabaseUser();
@@ -13,5 +13,6 @@ onMounted(() => async () => {
 <style lang="scss">
 h1 {
   color: var(--color-primary);
+  font-family: var(--font-family-mtsans);
 }
 </style>
